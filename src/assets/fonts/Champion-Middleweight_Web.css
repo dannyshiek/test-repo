@@ -1,0 +1,7 @@
+@font-face {
+  font-family: 'HCo Champion Middlewt';
+  src: url('./Champion-Middleweight_Web.woff2') format('woff2'),
+    url('./Champion-Middleweight_Web.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}

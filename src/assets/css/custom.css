@@ -1,0 +1,362 @@
+/* ***************************************** */
+/* gen updates                               */
+/* ***************************************** */
+
+.page-header{max-width:1270px}
+
+
+/*  These general color updates still need to be done on the master files */
+
+/* general.scss */
+.block__title {
+  color: #230939;
+  font-size: 32px;
+  line-height: 1.2;
+}
+.collapsible__button::before, 
+.collapsible__button::after {
+  background: #230939;
+}
+
+/* accordion.scss */
+.accordion .link-list__link {
+  color: #230939;
+}
+
+.link-list--categories .link-list__link {
+  color: #230939;
+}
+
+.content-block {
+  z-index: 0;
+}
+
+.blog-overview__date {
+  color: #424242;
+}
+.blog-overview__title {
+  color: #230939;
+}
+
+/* platform-ui.css */
+.page-footer .logo-container {
+  color: #212121;
+}
+
+.bg-brand--off-white {
+  color: #230939;
+}
+/* ***************************************** */
+/* new                                       */
+/* ***************************************** */
+/* for mobile size icons since they're too big now */
+@media (max-width: 940px) {
+.banner__media.media-block-mobile-size img {
+  max-height: 250px !important;
+}}
+/* need a new "black" bgcolor class in 01_base/typography.cscss */
+.bg-brand--black {
+  background: #212121;
+  color: #F7F5F0; 
+}
+.bg-brand--black a {
+  color: #2175D9; 
+}
+.bg-brand--black label {
+  color: #fff; 
+}
+
+/*  Need a new "teal" button. Complicated to do with general bg 
+  utility class due to hover effect and default specificity */
+.button--filled.button--teal {
+  background-color: #00b6b4;
+  color: #212121 !important;
+}
+.button--filled.button--teal:hover,
+.button--filled.button--teal:active,
+.button--filled.button--teal:focus {
+  background-color: #009D9B;
+  border-color: #009D9B;
+  color: #212121 !important;
+}
+.button--filled.button--teal .icon svg {
+  fill: #fff;
+}
+
+/* general overrides intended for general.scss  */
+.banner .content-block__title {
+  line-height: 1.2;
+}
+@media (min-width: 941px) and (max-width: 1205px) {
+  .banner .content-block__title {
+    font-size: 40px;
+  }
+}
+.block__title-teal {
+  color: #009D98;
+}
+.monster-color {
+  color: #230939 !important;
+}
+.button {
+  border-color: #f7f5f0 !important;
+  color: #f7f5f0 !important;
+}
+.button--monster-purple {
+  border-color: #230939 !important;
+  color: #230939 !important;
+}
+.button--monster-purple:hover,
+.button--monster-purple:active,
+.button--monster-purple:focus {
+  background-color: #230939 !important;
+  color: #f7f5f0 !important;
+} 
+.button--monster-white {
+  border-color: #FFF !important;
+  color: #FFF !important;
+}
+.button--monster-white:hover,
+.button--monster-white:active,
+.button--monster-white:focus {
+  background-color: #ffffff !important;
+  border-color: #212121 !important;
+  color: #212121 !important;
+}
+.button--white {
+  border-color: #FFF !important;
+  color: #230939 !important;
+  background-color: #fff !important;
+}
+.button--white:hover,
+.button--white:active,
+.button--white:focus {
+  background-color: #f2f2f2 !important;
+  border-color: #f2f2f2 !important;
+}
+@media (min-width: 940px) {
+  .browse-jobs-container {
+    border-bottom: 1px solid #616161;
+  }
+}
+
+/* darkened the default text for better a11y */
+.form-group__input input::-webkit-input-placeholder,
+input.form-control::-webkit-input-placeholder { /* Edge */
+  color: #6E6E6E;
+}
+.form-group__input input:-ms-input-placeholder,
+input.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #6E6E6E;
+}
+.form-group__input input::placeholder, 
+input.form-control::placeholder {
+  color: #6E6E6E;
+}
+
+/* orbit fix for header input fields double border and page movement */
+header .form-control.form-control--search:focus,
+header .form-control.form-control--search:hover,
+header .form-control.form-control--search:active {
+  border: 1px solid #fff;
+  box-shadow: inset 0px 0px 0px 1px #fff;
+  box-sizing: border-box;
+}
+/* hero specific overrides */
+/* app store banner */
+.media-block--half-width img.monsApp {
+  min-width: auto;
+  min-height: auto;
+  top: 0;
+  bottom: 0;
+  max-height: 90%;
+  left: 0;
+  right: 0;
+}
+@media (max-width: 940.98px) {
+  .media-block--half-width img.monsApp {
+    width: auto;
+    max-height: 230px;
+    margin: 20px auto 0;
+  }
+}
+@media (max-width: 500.98px) {
+  .media-block--half-width img.monsApp {
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+/* hero images position overrides */
+@media (min-width: 941px) {
+  .split-view--photo.split-view--photo--op-tr .media-block img {
+    object-position: top right;
+  }
+  .split-view--photo.split-view--photo--op-tc .media-block img {
+    object-position: top center;
+  }
+}
+
+/* fix */
+/* mobile header */
+.mux-close .icon-close {
+  top: 2px;
+}
+@media (min-width: 991px) {
+  .page-header .header-content {
+    min-height: 48px;
+  }
+  .pageHeader-home .page-header .header-content .search-bar-container {
+    display:none;
+  }
+}
+@media (max-width: 1199.98px) {
+  #pageHeader{
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+  }
+}
+@media (max-width: 991.98px) {
+  .search-bar-container.is-expanded fieldset {
+      padding-top: 5px;
+      padding-bottom: 8px;
+  }
+  .search-bar-container.is-expanded .btn.search-button {
+    margin-top: 5px !important;
+  }
+}
+
+
+/* typehahead */
+.typeahead-wrapper .typeahead-hints {
+  width: 98%;
+}
+.typeahead-wrapper .typeahead-hints .typeahead-hint-hover {
+  border-radius: 0;
+}
+.typeahead-wrapper .typeahead-hints .typeahead-hint {
+  line-height: 1.2;
+}
+/* *****************************************  */
+/* home page overrides                        */
+/* *****************************************  */
+@media (max-width: 1200px) {
+  .media-block--center.media-block--findout img {
+      -o-object-position: 80% top;
+      object-position: 80% top;
+  }
+}
+@media (max-width: 940px) {
+  .media-block--right.media-block--index img {
+      -o-object-position: center 15%;
+      object-position: center 15%;
+  }
+}
+
+/* *****************************************  */
+/* resume page                                */
+/* *****************************************  */
+.media-block--center.media-block--resume img {
+  -o-object-position: left top;
+  object-position: left top;
+}
+
+/* *****************************************  */
+/* utilities                                  */
+/* *****************************************  */
+.ff-champion {    
+    letter-spacing: 0 !important;
+}
+.d-ib {
+  display: inline-block !important;
+}
+.d-i {
+  display: initial !important;
+}
+.pos-s {
+  position: static !important;
+}
+.w-a {
+  width: auto !important;
+}
+.py-40 {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+
+ul.list-styled {
+  list-style-type: circle;
+  margin: 10px 25px 16px;
+}
+ul.list-styled li {
+  margin: 5px;
+}
+
+
+/* ************************************************** */
+/* hero search */
+/* ************************************************** */
+.search-bar-hero-container.search-bar-container {
+  margin-left:0;
+  width: 100%;
+}
+.search-bar-hero-container.search-bar-container .form-control {
+  min-height: 60px;
+  padding: 15px 19px 18px; 
+  background-image: none !important;
+  width: 100%;
+}
+@media (max-width: 940px) {
+  .search-bar-hero-container .typeahead-wrapper + .typeahead-wrapper {
+      margin-top: 10px;
+  }
+  .search-bar-hero-container .typeahead-wrapper {
+    display: block !important;
+  }
+  .content-block .button {
+    margin-top: 10px;
+  }
+  .search-bar-container .typeahead-wrapper fieldset {
+    padding: 0;
+    margin: 0;
+  }
+}
+@media (min-width: 941px) {
+  .typeahead-wrapper .typeahead-hints {
+    border-bottom: inset 1.5px;
+  }
+  .banner.secondary-search {
+    overflow: inherit;
+  }
+  .search-bar-hero-container.search-bar-container .form-control {
+    min-height: 80px;
+    padding-left: 27px;
+    padding-right: 27px;
+  }
+  .search-bar-hero-container.search-bar-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .search-bar-hero-container .typeahead-wrapper {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    margin-top: 0;
+  }
+  .search-bar-hero-container .btn-content {
+    display: none;
+  }
+  .search-bar-hero-container .button--icon {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMjMwOTM5IiBpZD0iYXJyb3ctcmlnaHQtMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cGF0aCBkPSJNMywxNS44OTY1IEwyNC42MDUsMTUuODk2NSBMMTcuMjksMjMuMjk3NSBDMTYuOTAxLDIzLjY5MDUgMTYuOTA1LDI0LjMyMzUgMTcuMjk4LDI0LjcxMjUgQzE3LjY5MSwyNS4xMDA1IDE4LjMyNCwyNS4wOTY1IDE4LjcxMiwyNC43MDQ1IEwyNy43MTEsMTUuNTk5NSBDMjguMSwxNS4yMDY1IDI4LjA5NiwxNC41NzM1IDI3LjcwMywxNC4xODU1IEwxOC43MDQsNS4yODk1IEMxOC41MDksNS4wOTY1IDE4LjI1NSw1LjAwMDUgMTguMDAxLDUuMDAwNSBDMTcuNzQzLDUuMDAwNSAxNy40ODUsNS4wOTk1IDE3LjI5LDUuMjk2NSBDMTYuOTAxLDUuNjg5NSAxNi45MDUsNi4zMjI1IDE3LjI5OCw2LjcxMDUgTDI0LjU2NiwxMy44OTY1IEwzLDEzLjg5NjUgQzIuNDQ3LDEzLjg5NjUgMiwxNC4zNDQ1IDIsMTQuODk2NSBDMiwxNS40NDg1IDIuNDQ3LDE1Ljg5NjUgMywxNS44OTY1Ii8+Cjwvc3ZnPg==");
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+

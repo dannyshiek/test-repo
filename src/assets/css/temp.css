@@ -1,0 +1,25 @@
+header fieldset.form-group input {
+  background-color: black;
+  background-position: .33333rem;
+  background-repeat: no-repeat;
+  color: #bfedec;
+  padding: .75rem;
+  padding-left: 2rem;
+  font-size: inherit;
+  line-height: inherit;
+  font-size: .88889rem;
+  min-height: inherit;
+}
+
+header button.search-button {
+  margin-top: 0 !important;
+}
+
+header fieldset.form-group input:focus {
+  padding: .75rem;
+  padding-left: 2rem;
+}
+
+ul.d-n.d-lg-b.mb-0 {
+  margin-top: 15px;
+}

@@ -1,0 +1,40 @@
+{
+  "name": "static-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.html",
+  "private": true,
+  "scripts": {
+    "build": "webpack --mode=development",
+    "start": "webpack-dev-server --open --port 9002",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.8.3",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-transform-destructuring": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-react-html-attrs": "^2.1.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "gh-pages": "^2.2.0",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "lodash": "^4.17.15",
+    "monster-design-system": "file:../ux-design-system",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
